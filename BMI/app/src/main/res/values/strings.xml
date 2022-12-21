@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BMI</string>
+    <string name="hint_wt">Enter your weight:</string>
+    <string name="hint_htF">Enter your height (in Feet):</string>
+    <string name="hint_htI">Enter your height (in Inches):</string>
+    <string name="hint_calculate">Calculate BMI:</string>
+
+    <string name="hint_result">Result: </string>
+    <string name="Ow">You\'re OverWeight. </string>
+    <string name="Uw">You\'re UnderWeight. </string>
+    <string name="Hw">You\'re Healthy. </string>
+
+
+
+
+</resources>
