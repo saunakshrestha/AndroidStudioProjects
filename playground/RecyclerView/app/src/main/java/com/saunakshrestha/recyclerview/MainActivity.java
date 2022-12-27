@@ -23,19 +23,18 @@ public class MainActivity extends AppCompatActivity {
         recyclerContactPerson.setLayoutManager(new LinearLayoutManager(this));
 
 
-        arrContact.add(new ContactModel(R.drawable.camera, getString(R.string.david),getString(R.string.davidNo)));
-        arrContact.add(new ContactModel(R.drawable.calendar, getString(R.string.raju), getString(R.string.rajuNo)));
-        arrContact.add(new ContactModel(R.drawable.briefcase,getString(R.string.ronaldo), getString(R.string.ronaldoNo)));
-        arrContact.add(new ContactModel(R.drawable.camera, getString(R.string.son), getString(R.string.sonNo)));
-        arrContact.add(new ContactModel(R.drawable.hat, getString(R.string.michael), getString(R.string.michaelNo)));
-        arrContact.add(new ContactModel(R.drawable.briefcase,getString(R.string.messi), getString(R.string.messiNo)));
-        arrContact.add(new ContactModel(R.drawable.camera, getString(R.string.david2),getString(R.string.davidNo2)));
-        arrContact.add(new ContactModel(R.drawable.calendar, getString(R.string.raju2), getString(R.string.rajuNo2)));
-        arrContact.add(new ContactModel(R.drawable.briefcase,getString(R.string.ronaldo2), getString(R.string.ronaldoNo2)));
-        arrContact.add(new ContactModel(R.drawable.camera, getString(R.string.son2), getString(R.string.sonNo2)));
-        arrContact.add(new ContactModel(R.drawable.hat, getString(R.string.michael2), getString(R.string.michaelNo2)));
-        arrContact.add(new ContactModel(R.drawable.briefcase,getString(R.string.messi2), getString(R.string.messiNo2)));
-
+        arrContact.add(new ContactModel(R.drawable.camera, getString(R.string.apple),getString(R.string.appleNo)));
+        arrContact.add(new ContactModel(R.drawable.calendar, getString(R.string.ball), getString(R.string.ballNo)));
+        arrContact.add(new ContactModel(R.drawable.briefcase,getString(R.string.cat), getString(R.string.catNo)));
+        arrContact.add(new ContactModel(R.drawable.camera, getString(R.string.dog), getString(R.string.dogNo)));
+        arrContact.add(new ContactModel(R.drawable.hat, getString(R.string.elephant), getString(R.string.elephantNo)));
+        arrContact.add(new ContactModel(R.drawable.briefcase,getString(R.string.fish), getString(R.string.fishNo)));
+        arrContact.add(new ContactModel(R.drawable.camera, getString(R.string.gun),getString(R.string.gunNo)));
+        arrContact.add(new ContactModel(R.drawable.calendar, getString(R.string.hat), getString(R.string.hatNo)));
+        arrContact.add(new ContactModel(R.drawable.briefcase,getString(R.string.ice), getString(R.string.iceNo)));
+        arrContact.add(new ContactModel(R.drawable.camera, getString(R.string.jelly), getString(R.string.jellyNo)));
+        arrContact.add(new ContactModel(R.drawable.hat, getString(R.string.kitkat), getString(R.string.kitkatNo)));
+        arrContact.add(new ContactModel(R.drawable.briefcase,getString(R.string.lion), getString(R.string.lionNo)));
 
         RecyclerContactAdapter adapter = new RecyclerContactAdapter(this,arrContact);
         recyclerContactPerson.setAdapter(adapter);
