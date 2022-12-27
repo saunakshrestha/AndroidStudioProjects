@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Intent Passing App</string>
+    <string name="btn_next">Next</string>
 </resources>
