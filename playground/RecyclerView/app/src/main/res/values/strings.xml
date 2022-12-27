@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Recycler View</string>
+    <string name="contactNumber">ContactNumber</string>
+    <string name="contact">Contact</string>
+    <string name="david">David</string>
+    <string name="raju">Raju</string>
+    <string name="ronaldo">Ronaldo</string>
+    <string name="son">Son</string>
+    <string name="michael">Michael</string>
+    <string name="messi">Messi</string>
+    <string name="davidNo">7777</string>
+    <string name="rajuNo">8888</string>
+    <string name="ronaldoNo">11111</string>
+    <string name="sonNo">5555</string>
+    <string name="michaelNo">2333</string>
+    <string name="messiNo">10101</string>
+    <string name="david2">David</string>
+    <string name="raju2">Raju</string>
+    <string name="ronaldo2">Ronaldo</string>
+    <string name="son2">Son</string>
+    <string name="michael2">Michael</string>
+    <string name="messi2">Messi</string>
+    <string name="davidNo2">7777</string>
+    <string name="rajuNo2">8888</string>
+    <string name="ronaldoNo2">11111</string>
+    <string name="sonNo2">5555</string>
+    <string name="michaelNo2">2333</string>
+    <string name="messiNo2">10101</string>
+    <string name="description">Image</string>
+</resources>
