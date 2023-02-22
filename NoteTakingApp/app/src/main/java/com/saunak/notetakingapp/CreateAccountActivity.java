@@ -1,13 +1,21 @@
 package com.saunak.notetakingapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class CreateAccountActivity extends AppCompatActivity {
 
@@ -44,7 +52,51 @@ public class CreateAccountActivity extends AppCompatActivity {
         String password = passwordEditText.getText().toString();
         String confirmPassword = confirmPasswordEditText.getText().toString();
         boolean isValidated = validateData(email,password,confirmPassword);
+        //if not validated we return
+        if(!isValidated){
+            return;
+        }
+        //pass email & password and not confirmPAssword since they are same
+        createAccountInFirebase(email,password);
     }
+
+    void createAccountInFirebase(String email,String password){
+        changeInProgress(true);
+
+        FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
+        firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(CreateAccountActivity.this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                changeInProgress(false);//false when try creating same username account twice
+                if(task.isSuccessful()){
+                    //creating account done
+                    Toast.makeText(CreateAccountActivity.this,"Sucessfully created account, Check email to verify", Toast.LENGTH_SHORT).show();
+                    firebaseAuth.getCurrentUser().sendEmailVerification();
+                    firebaseAuth.signOut();
+                    finish();
+
+
+                }else{
+                    //failure
+                    Toast.makeText(CreateAccountActivity.this,task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+    }
+    //method to show progress bar as it will take time creating account in firebase
+    void changeInProgress(boolean inProgress){
+        if(inProgress){
+            progressBar.setVisibility(View.VISIBLE);
+            createAccountBtn.setVisibility(View.GONE);
+        }
+        else{
+            progressBar.setVisibility(View.GONE);
+            createAccountBtn.setVisibility(View.VISIBLE);
+        }
+    }
+
+
 //Now lets validate all those data so lets create method for validating those data
       boolean validateData(String email,String password,String confirmPassword){
         //validate the data input by user
@@ -57,7 +109,7 @@ public class CreateAccountActivity extends AppCompatActivity {
             return false;
         }
         if(!password.equals(confirmPassword)){
-            confirmPasswordEditText.setError("Password doesnot match");
+            confirmPasswordEditText.setError("Password doesn't match");
             return false;
         }
         return true;
