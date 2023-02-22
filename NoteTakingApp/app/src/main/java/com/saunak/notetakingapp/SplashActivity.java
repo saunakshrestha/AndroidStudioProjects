@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                // After 1 sec , navigating to main activity
-                startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                startActivity(new Intent(SplashActivity.this,CreateAccountActivity.class));
                 finish();
 
             }
