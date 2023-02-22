@@ -21,6 +21,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                // After 1 sec , navigating to main activity
                 startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                finish();
 
             }
         },1000);
