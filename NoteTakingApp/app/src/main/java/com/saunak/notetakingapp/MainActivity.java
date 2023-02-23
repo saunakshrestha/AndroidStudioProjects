@@ -2,6 +2,7 @@ package com.saunak.notetakingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -15,6 +16,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         addNoteBtn = findViewById(R.id.add_note_btn);
-        addNoteBtn.setOnClickListener((v -> ));
+        addNoteBtn.setOnClickListener((v -> startActivity(new Intent(MainActivity.this,NoteDetailsActivity.class))));
     }
 }
