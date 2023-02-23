@@ -79,6 +79,8 @@
             android:id="@+id/login_btn"
             android:layout_height="64dp"
             android:text="LogIn"
+            android:textColor="@color/black"
+
             android:layout_marginTop="12dp"
             android:textSize="16sp"
             />

@@ -70,7 +70,7 @@ public class CreateAccountActivity extends AppCompatActivity {
                 changeInProgress(false);//false when try creating same username account twice
                 if(task.isSuccessful()){
                     //creating account done
-                    Toast.makeText(CreateAccountActivity.this,"Sucessfully created account, Check email to verify", Toast.LENGTH_SHORT).show();
+                    Utility.showToast(CreateAccountActivity.this,"Sucessfully created account, Check email to verify");
                     firebaseAuth.getCurrentUser().sendEmailVerification();
                     firebaseAuth.signOut();
                     finish();
@@ -78,7 +78,7 @@ public class CreateAccountActivity extends AppCompatActivity {
 
                 }else{
                     //failure
-                    Toast.makeText(CreateAccountActivity.this,task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    Utility.showToast(CreateAccountActivity.this,task.getException().getLocalizedMessage());
                 }
             }
         });
