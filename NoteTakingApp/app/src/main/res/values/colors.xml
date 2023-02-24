@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="my_primary">#f8eee2</color>
-    <color name="dark_red">#da614c</color>
+    <color name="red">#68101D</color>
+    <color name="bluish">#2B3467</color>
+
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF818786</color>
     <color name="black">#FF000000</color>

@@ -27,18 +27,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello."
+            android:text="@string/welcome_back"
             android:textStyle="bold"
             android:textSize="32sp"
-            android:textColor="@color/black"/>
+            android:paddingBottom="4dp"
+            android:textColor="@color/bluish"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome Back"
+            android:text="@string/login_get_started"
             android:textStyle="bold"
-            android:textSize="36sp"
-            android:textColor="@color/black"/>
+            android:textSize="18sp"
+            android:textColor="@color/bluish"/>
 
     </LinearLayout>
 
@@ -78,9 +79,9 @@
             android:layout_width="match_parent"
             android:id="@+id/login_btn"
             android:layout_height="64dp"
-            android:text="LogIn"
-            android:textColor="@color/black"
-
+            android:backgroundTint="@color/bluish"
+            android:text="@string/login"
+            android:textColor="@color/white"
             android:layout_marginTop="12dp"
             android:textSize="16sp"
             />
@@ -105,13 +106,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don't have an account? "/>
+            android:textColor="@color/bluish"
+            android:text="@string/don_t_have_an_account"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:textColor="@color/bluish"
             android:id="@+id/create_account_text_view_btn"
-            android:text="Create Account"/>
+            android:text="@string/create_account"/>
 
     </LinearLayout>
 

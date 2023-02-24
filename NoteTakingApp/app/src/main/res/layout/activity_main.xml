@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/page_title"
-            android:text="Notes"
+            android:text="@string/notes"
             android:textSize="32sp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
