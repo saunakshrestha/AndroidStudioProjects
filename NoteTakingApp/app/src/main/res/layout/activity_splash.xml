@@ -9,6 +9,12 @@
     android:gravity="center"
     tools:context=".SplashActivity">
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logo"
+        android:layout_marginVertical="5dp"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
