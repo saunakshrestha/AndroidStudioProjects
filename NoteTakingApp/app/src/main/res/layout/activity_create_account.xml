@@ -5,17 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:layout_marginHorizontal="32dp"
     android:layout_marginVertical="16dp"
-    tools:context=".CreateAccountActivity">
+    tools:context=".CreateAccountActivity"
+    >
 
     <ImageView
-        android:layout_width="128dp"
-        android:layout_height="128dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_marginVertical="32dp"
         android:id="@+id/sign_up_icon"
-        android:src="@drawable/sign_up"/>
+        android:src="@drawable/sign_up"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,10 +31,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/welcome"
-
             android:textStyle="bold"
             android:textSize="32sp"
             android:paddingBottom="4dp"
+            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/bluish"/>
 
         <TextView
@@ -40,6 +43,7 @@
             android:text="@string/create_account_get_started"
             android:textStyle="bold"
             android:textSize="18sp"
+            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/bluish"/>
 
     </LinearLayout>
@@ -50,6 +54,7 @@
         android:id="@+id/form_layout"
         android:layout_below="@id/hello_text"
         android:layout_marginVertical="32dp"
+
         android:orientation="vertical">
 
         <EditText
@@ -59,6 +64,8 @@
             android:inputType="textEmailAddress"
             android:hint="@string/email_id"
             android:textSize="20sp"
+            android:fontFamily="@font/poppins_regular"
+
             android:background="@drawable/rounded_corner"
             android:padding="16dp"
             android:layout_marginTop="12dp"
@@ -70,6 +77,8 @@
             android:inputType="textPassword"
             android:hint="@string/password"
             android:textSize="20sp"
+            android:fontFamily="@font/poppins_regular"
+
             android:background="@drawable/rounded_corner"
             android:padding="16dp"
             android:layout_marginTop="12dp"
@@ -84,6 +93,8 @@
             android:textSize="20sp"
             android:background="@drawable/rounded_corner"
             android:padding="16dp"
+            android:fontFamily="@font/poppins_regular"
+
             android:layout_marginTop="12dp"
             />
 
@@ -95,6 +106,8 @@
             android:backgroundTint="@color/bluish"
             android:textColor="@color/white"
             android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_regular"
+
             android:textSize="16sp"
             />
 
