@@ -17,17 +17,19 @@
             android:id="@+id/page_title"
             android:text="@string/notes"
             android:textSize="32sp"
+            android:fontFamily="@font/poppins_regular"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
         <ImageButton
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:id="@+id/menu_btn"
             android:src="@drawable/baseline_menu_24"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             app:tint="@color/black"
+            android:contentDescription="@string/menu_button"
             android:background="?attr/selectableItemBackgroundBorderless"
             />
 
@@ -36,6 +38,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:layout_below="@id/title_bar_layout"
         android:id="@+id/recyler_view"/>
 
@@ -48,6 +51,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:src="@drawable/baseline_add_24"
+        android:contentDescription="@string/create_note"
 
         />
 

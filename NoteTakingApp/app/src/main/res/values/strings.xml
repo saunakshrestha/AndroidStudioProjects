@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">NoteYard</string>
-    <string name="quote">A Simple Note Taking App...</string>
+    <string name="quote">A Simple Note Taking App ...</string>
     <string name="notes">Notes</string>
     <string name="welcome">Welcome!</string>
     <string name="create_account_get_started"><![CDATA[Create account & get started]]></string>
@@ -8,7 +8,7 @@
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="create_account">Create Account</string>
-    <string name="already_have_an_account">Already have an account?</string>
+    <string name="already_have_an_account">Already have an account? </string>
     <string name="login">Login</string>
     <string name="add_new_note">Add New Note</string>
     <string name="title">Title</string>
@@ -18,4 +18,9 @@
     <string name="login_get_started"><![CDATA[Login & get started..]]></string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="logo">logo</string>
+    <string name="create_note">create note</string>
+    <string name="menu_button">menu button</string>
+    <string name="save_note">save note</string>
+    <string name="note_title">note title</string>
+    <string name="this_can_be_note_content_that_can_be_long">this can be note content that can be long</string>
 </resources>

@@ -38,9 +38,9 @@ public class CreateAccountActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progress_bar);
         loginBtnTextView = findViewById(R.id.login_text_view_btn);
 
-        //link all those to xml now lets set onCLickListener and VAlidate the data
+        //link all those to xml now lets set onCLickListener and Validate the data
         createAccountBtn.setOnClickListener(v-> createAccount());
-        loginBtnTextView.setOnClickListener(v->finish());
+        loginBtnTextView.setOnClickListener(v-> finish());
 
 
 

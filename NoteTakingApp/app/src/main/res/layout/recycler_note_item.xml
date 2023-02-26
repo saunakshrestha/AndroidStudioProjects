@@ -14,27 +14,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/note_title_text_view"
-        android:text="note title"
+        android:text="@string/note_title"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:fontFamily="@font/poppins_regular"
         android:layout_marginVertical="4dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/note_content_text_view"
-        android:text="this can be note content that can be long"
+        android:text="@string/this_can_be_note_content_that_can_be_long"
         android:maxLines="2"
         android:ellipsize="end"
         android:textSize="17sp"
+        android:fontFamily="@font/poppins_regular"
         android:layout_marginVertical="4dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/note_timestamp_text_view"
-        android:text="note title"
+        android:text="@string/note_title"
         android:textSize="12sp"
         android:gravity="right"
+        android:fontFamily="@font/poppins_regular"
         android:layout_marginVertical="4dp"/>
 
 </LinearLayout>
