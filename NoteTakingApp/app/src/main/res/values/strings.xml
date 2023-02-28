@@ -29,6 +29,6 @@
     <string name="edit_your_note">Edit your Note</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
-    <string name="the_signed_user_is">The signed user is (email):</string>
+    <string name="the_signed_user_is">The signed user (email) is:</string>
     <string name="developed_by">Developed by Saunak Shrestha</string>
 </resources>
