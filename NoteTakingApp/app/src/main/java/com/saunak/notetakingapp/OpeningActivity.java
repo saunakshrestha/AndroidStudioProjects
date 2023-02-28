@@ -9,7 +9,8 @@ import android.os.Handler;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class SplashActivity extends AppCompatActivity {
+
+public class OpeningActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,22 +20,19 @@ public class SplashActivity extends AppCompatActivity {
         //we will run splash activity for some time and go back to main activity
         //add a timer
         //pass runnable interface with 1000ms timer
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-               // After 1 sec , navigating to main activity
-                FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-                if(currentUser == null){
-                    startActivity(new Intent(SplashActivity.this,LoginActivity.class));
-
-                }
-                else{
-                    startActivity(new Intent(SplashActivity.this,MainActivity.class));
-
-                }
-                finish();
+        new Handler().postDelayed(() -> {
+           // After 1 sec , navigating to main activity
+            FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+            if(currentUser == null){
+                startActivity(new Intent(OpeningActivity.this,LoginActivity.class));
 
             }
+            else{
+                startActivity(new Intent(OpeningActivity.this,MainActivity.class));
+
+            }
+            finish();
+
         },1000);
     }
 }

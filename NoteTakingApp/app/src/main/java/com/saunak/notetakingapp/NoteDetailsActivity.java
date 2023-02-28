@@ -1,18 +1,12 @@
 package com.saunak.notetakingapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentReference;
 
@@ -49,7 +43,7 @@ public class NoteDetailsActivity extends AppCompatActivity {
         contentEditText.setText(content);
 
         if(isEditMode){
-            pageTitleTextView.setText("Edit your Note");
+            pageTitleTextView.setText(R.string.edit_your_note);
             deleteNoteTextViewBtn.setVisibility(View.VISIBLE);
         }
 
@@ -62,17 +56,9 @@ public class NoteDetailsActivity extends AppCompatActivity {
                     .setTitle("Delete note")
                     .setMessage("Are you sure?")
                     .setIcon(R.drawable.baseline_delete_24)
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            deleteNoteFromFirebase();
-                        }
-                    })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
+                    .setPositiveButton("Yes", (dialog, which) -> deleteNoteFromFirebase())
+                    .setNegativeButton("No", (dialog, which) -> {
 
-                        }
                     });
             builder.show();
 
@@ -82,7 +68,7 @@ public class NoteDetailsActivity extends AppCompatActivity {
     void saveNote(){
         String noteTitle = titleEditText.getText().toString();
         String noteContent = contentEditText.getText().toString();
-        if(noteTitle == null || noteTitle.isEmpty() ){
+        if(noteTitle.isEmpty()){
             titleEditText.setError("Title is required");
             return;
         }
@@ -107,16 +93,13 @@ public class NoteDetailsActivity extends AppCompatActivity {
             documentReference = Utility.getCollectionReferenceForNotes().document();
 
         }
-        documentReference.set(note).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    //note is added
-                    Utility.showToast(NoteDetailsActivity.this,"Note added successfully");
-                    finish();
-                }else{
-                    Utility.showToast(NoteDetailsActivity.this,"Failed while adding note");
-                }
+        documentReference.set(note).addOnCompleteListener(task -> {
+            if(task.isSuccessful()){
+                //note is added
+                Utility.showToast(NoteDetailsActivity.this,"Note added successfully");
+                finish();
+            }else{
+                Utility.showToast(NoteDetailsActivity.this,"Failed while adding note");
             }
         });
 
@@ -127,16 +110,13 @@ public class NoteDetailsActivity extends AppCompatActivity {
 
             documentReference = Utility.getCollectionReferenceForNotes().document(docId);
 
-        documentReference.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    //note is deleted
-                    Utility.showToast(NoteDetailsActivity.this,"Note deleted successfully");
-                    finish();
-                }else{
-                    Utility.showToast(NoteDetailsActivity.this,"Failed while deleting note");
-                }
+        documentReference.delete().addOnCompleteListener(task -> {
+            if(task.isSuccessful()){
+                //note is deleted
+                Utility.showToast(NoteDetailsActivity.this,"Note deleted successfully");
+                finish();
+            }else{
+                Utility.showToast(NoteDetailsActivity.this,"Failed while deleting note");
             }
         });
 

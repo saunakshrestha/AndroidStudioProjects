@@ -7,7 +7,7 @@
     android:background="@color/my_primary"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".SplashActivity">
+    tools:context=".OpeningActivity">
 
     <ImageView
         android:layout_width="100dp"

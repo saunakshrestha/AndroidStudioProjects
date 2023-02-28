@@ -26,4 +26,5 @@
     <string name="menu_item_search">Search your notes here...</string>
     <string name="item_acciunt">Account</string>
     <string name="item_account">Account</string>
+    <string name="edit_your_note">Edit your Note</string>
 </resources>
