@@ -5,7 +5,10 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,11 +16,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
+import java.util.ArrayList;
+
 public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.NoteViewHolder> {
     Context context;
+
     public NoteAdapter(@NonNull FirestoreRecyclerOptions<Note> options,Context context) {
         super(options);
         this.context=context;
+
     }
 
     @Override
@@ -25,8 +32,8 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
         holder.titleTextView.setText(note.title);
         holder.contentTextView.setText(note.content);
         holder.timestampTextView.setText(Utility.timestampToString(note.timestamp));
-
         holder.itemView.setOnClickListener((v) -> {
+
             Intent intent = new Intent(context,NoteDetailsActivity.class);
             intent.putExtra("title",note.title);
             intent.putExtra("content",note.content);
@@ -37,6 +44,16 @@ public class NoteAdapter extends FirestoreRecyclerAdapter<Note, NoteAdapter.Note
 
 
         });
+
+        initAnim(holder.itemView,position);
+
+    }
+
+    private void initAnim(View view,int position){
+
+            Animation slider= AnimationUtils.loadAnimation(context, android.R.anim.slide_out_right);
+            view.startAnimation(slider);
+
     }
 
     @NonNull

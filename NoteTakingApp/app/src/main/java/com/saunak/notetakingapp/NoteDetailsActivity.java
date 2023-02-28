@@ -1,8 +1,10 @@
 package com.saunak.notetakingapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -54,7 +56,27 @@ public class NoteDetailsActivity extends AppCompatActivity {
 
         saveNoteBtn.setOnClickListener((v) -> saveNote());
 
-        deleteNoteTextViewBtn.setOnClickListener(v -> deleteNoteFromFirebase());
+        deleteNoteTextViewBtn.setOnClickListener(v -> {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(NoteDetailsActivity.this)
+                    .setTitle("Delete note")
+                    .setMessage("Are you sure?")
+                    .setIcon(R.drawable.baseline_delete_24)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            deleteNoteFromFirebase();
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+            builder.show();
+
+        });
     }
 
     void saveNote(){

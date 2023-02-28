@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_search"
+        android:icon="@drawable/baseline_search_24"
+        android:iconTint="@color/black"
+        android:title="@string/menu_item_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/iconAccount"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:iconTint="@color/black"
+        android:title="@string/item_account"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>

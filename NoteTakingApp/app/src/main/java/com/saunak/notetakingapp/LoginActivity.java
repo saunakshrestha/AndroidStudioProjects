@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
@@ -62,11 +63,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 changeInProgress(false);
+
+
                 if (task.isSuccessful()) {
                     //login sucessfully
                     if (firebaseAuth.getCurrentUser().isEmailVerified()) {
                         //goto main activity
-                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        Intent intent=new Intent(LoginActivity.this, MainActivity.class);
+
+                        startActivity(intent);
                         finish();
                     } else {
                         Utility.showToast(LoginActivity.this, "Email not verified,please verify your email");

@@ -23,4 +23,7 @@
     <string name="save_note">save note</string>
     <string name="note_title">note title</string>
     <string name="this_can_be_note_content_that_can_be_long">this can be note content that can be long</string>
+    <string name="menu_item_search">Search your notes here...</string>
+    <string name="item_acciunt">Account</string>
+    <string name="item_account">Account</string>
 </resources>
