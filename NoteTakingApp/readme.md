@@ -24,7 +24,7 @@ The app includes the following features:
 
 ## Screenshots
 
-![NoteYard](NoteTakingApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
+![NoteYard](https://github.com/saunakshrestha/AndroidStudioProjects/blob/master/NoteTakingApp/app/src/main/ic_launcher-playstore.png?raw=true)
 
 ## Installation
 
