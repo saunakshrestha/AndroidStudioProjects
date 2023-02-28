@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+<RelativeLayout
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:layout_marginHorizontal="32dp"
     android:layout_marginVertical="16dp"
     tools:context=".CreateAccountActivity">
@@ -100,7 +112,7 @@
             android:padding="5dp"
             android:backgroundTint="@color/bluish"
             android:fontFamily="@font/poppins_regular"
-            android:text="@string/create_account"
+            android:text="@string/sign_up"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:background="@drawable/rounded_corner" />
@@ -134,10 +146,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_regular"
-            android:text="@string/login"
+            android:text="@string/sign_in"
             android:textColor="@color/bluish"
             android:textStyle="bold" />
 
     </LinearLayout>
 
 </RelativeLayout>
+
+</ScrollView>

@@ -15,8 +15,8 @@
     <string name="content">Content</string>
     <string name="delete_note">Delete note</string>
     <string name="welcome_back">Welcome Back !</string>
-    <string name="login_get_started"><![CDATA[Login & get started..]]></string>
-    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="signin_get_started"><![CDATA[Sign in & get started..]]></string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
     <string name="logo">logo</string>
     <string name="create_note">create note</string>
     <string name="menu_button">menu button</string>
@@ -27,4 +27,8 @@
     <string name="item_acciunt">Account</string>
     <string name="item_account">Account</string>
     <string name="edit_your_note">Edit your Note</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="the_signed_user_is">The signed user is (email):</string>
+    <string name="developed_by">Developed by Saunak Shrestha</string>
 </resources>

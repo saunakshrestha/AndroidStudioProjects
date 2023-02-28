@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/comfort_regular"
-                android:text="@string/login_get_started"
+                android:text="@string/signin_get_started"
                 android:textColor="@color/bluish"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -72,7 +72,7 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/rounded_corner"
                 android:fontFamily="@font/comfort_regular"
-                android:hint="Email Id"
+                android:hint="@string/email_id"
                 android:inputType="textEmailAddress"
                 android:padding="14dp"
                 android:textSize="16sp" />
@@ -97,7 +97,7 @@
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/bluish"
                 android:fontFamily="@font/comfort_regular"
-                android:text="@string/login"
+                android:text="@string/sign_in"
                 android:textColor="@color/white"
                 android:textSize="16sp"
 
@@ -133,7 +133,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_regular"
-                android:text="@string/create_account"
+                android:text="@string/sign_up"
+                android:layout_marginLeft="5dp"
                 android:textColor="@color/bluish"
                 android:textStyle="bold" />
 

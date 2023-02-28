@@ -13,7 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/logo"
-        android:layout_marginVertical="5dp"
+        android:layout_marginVertical="3dp"
         android:contentDescription="@string/logo"
         />
     <TextView
@@ -21,8 +21,9 @@
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textSize="36sp"
-        android:fontFamily="@font/poppins_bold"
+        android:fontFamily="@font/comfort_regular"
         android:textColor="@color/bluish"
+        android:layout_marginVertical="5dp"
         android:gravity="center"
         android:textStyle="bold"
 
@@ -41,11 +42,27 @@
 
         />
 
-    <ProgressBar
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:indeterminateTint="@color/bluish"
-        android:layout_margin="16dp"/>
+<!--    <ProgressBar-->
+<!--        android:layout_width="24dp"-->
+<!--        android:layout_height="24dp"-->
+<!--        android:indeterminateTint="@color/bluish"-->
+<!--        android:layout_margin="16dp"/>-->
+
+
+
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_slab"
+            android:text="@string/developed_by"
+            />
 
 
 
