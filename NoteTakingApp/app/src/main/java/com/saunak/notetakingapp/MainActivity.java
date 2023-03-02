@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         noteModelList = new ArrayList<>();
         if (getSupportActionBar() != null)
-            getSupportActionBar().setTitle("Notes Yard");
+            getSupportActionBar().setTitle("NoteYard");
 
 
     }

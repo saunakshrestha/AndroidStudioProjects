@@ -2,11 +2,17 @@ package com.saunak.notetakingapp;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentReference;
 
@@ -14,11 +20,13 @@ import com.google.firebase.firestore.DocumentReference;
 public class NoteDetailsActivity extends AppCompatActivity {
 
     EditText titleEditText,contentEditText;
-    ImageButton saveNoteBtn;
+    TextView saveNoteBtn;
     TextView pageTitleTextView;
     String title,content,docId;
     boolean isEditMode = false;
     TextView deleteNoteTextViewBtn;
+    private long pressedTime;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +72,19 @@ public class NoteDetailsActivity extends AppCompatActivity {
 
         });
     }
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(NoteDetailsActivity.this)
+                .setTitle("Do you want to save note?")
+                .setMessage("Are you sure?")
+                .setIcon(R.drawable.baseline_done_24)
+                .setPositiveButton("Yes", (dialog, which) -> saveNote())
+                .setNegativeButton("No", (dialog, which) -> {
+                    super.onBackPressed();
+                });
+        builder.show();
 
+    }
     void saveNote(){
         String noteTitle = titleEditText.getText().toString();
         String noteContent = contentEditText.getText().toString();
@@ -96,7 +116,15 @@ public class NoteDetailsActivity extends AppCompatActivity {
         documentReference.set(note).addOnCompleteListener(task -> {
             if(task.isSuccessful()){
                 //note is added
-                Utility.showToast(NoteDetailsActivity.this,"Note added successfully");
+                Toast toast = new Toast(getApplicationContext());
+                View getToastView = getLayoutInflater()
+                        .inflate(R.layout.my_toast, (ViewGroup) findViewById(R.id.toastViewGroup));
+                toast.setView(getToastView);
+                TextView tvMessage = getToastView.findViewById(R.id.simpleToast);
+                tvMessage.setText(R.string.Note_added_successfully);
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM, 0, -100);
+                toast.show();
                 finish();
             }else{
                 Utility.showToast(NoteDetailsActivity.this,"Failed while adding note");
@@ -113,7 +141,15 @@ public class NoteDetailsActivity extends AppCompatActivity {
         documentReference.delete().addOnCompleteListener(task -> {
             if(task.isSuccessful()){
                 //note is deleted
-                Utility.showToast(NoteDetailsActivity.this,"Note deleted successfully");
+                Toast toast = new Toast(getApplicationContext());
+                View getToastView = getLayoutInflater()
+                        .inflate(R.layout.my_toast, (ViewGroup) findViewById(R.id.toastViewGroup));
+                toast.setView(getToastView);
+                TextView tvMessage = getToastView.findViewById(R.id.simpleToast);
+                tvMessage.setText(R.string.Note_has_been_deleted);
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM, 0, -100);
+                toast.show();
                 finish();
             }else{
                 Utility.showToast(NoteDetailsActivity.this,"Failed while deleting note");

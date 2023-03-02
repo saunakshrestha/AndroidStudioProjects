@@ -1,6 +1,15 @@
+<h1 id="title" align="center">NoteTakingApp(NoteYard)</h1>
+
+<p align="center"><img src="https://socialify.git.ci/saunakshrestha/notetakingapp/image?description=1&amp;descriptionEditable=NoteYard%20is%20a%20simple%20note%20taking%20app%20for%20Android%2C%20written%20in%20Java.%20The%20app%20allows%20users%20to%20create%2C%20edit%2C%20delete%20notes%20sync%20with%20firebase%20database.&amp;font=KoHo&amp;forks=1&amp;issues=1&amp;language=1&amp;logo=https%3A%2F%2Fgithub.com%2Fsaunakshrestha%2FAndroidStudioProjects%2Fblob%2Fmaster%2FNoteTakingApp%2Fapp%2Fsrc%2Fmain%2Fic_launcher-playstore.png%3Fraw%3Dtrue&amp;name=1&amp;owner=1&amp;pattern=Diagonal%20Stripes&amp;pulls=1&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
+
 # NoteYard
 
 NoteYard is a simple note taking app for Android, written in Java. The app allows users to create, edit and delete notes.
+
+## Screenshots
+
+<img src="https://i.ibb.co/MchYN0n/ezgif-com-gif-maker.gif" alt="project-screenshot" width="300" height="650/">
+<img src="https://i.ibb.co/6tjvjBn/Splash.png" alt="project-screenshot" width="300" height="650/">
 
 ## Technologies Used
 
@@ -21,10 +30,6 @@ The app includes the following features:
 - Pin notes to top for quick access
 - Archive notes for future reference
 - Share notes with others
-
-## Screenshots
-
-![NoteYard](https://github.com/saunakshrestha/AndroidStudioProjects/blob/master/NoteTakingApp/app/src/main/ic_launcher-playstore.png?raw=true)
 
 ## Installation
 
